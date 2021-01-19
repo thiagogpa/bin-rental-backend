@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "capstone backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 10000",
+    "test:coverage": "nyc mocha",
+    "test:repl": "mocha debug",
+    "test:debug": "mocha --inspect --debug-brk"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.3.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.13",
+    "stripe": "^8.78.0"
+  },
+  "devDependencies": {
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  }
+}
